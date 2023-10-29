@@ -1,0 +1,21 @@
+#dnd dice program
+import random
+risp = True
+c=0
+while risp == True:
+    c=int(input("What dice do you want to throw? "))
+    while c not in [4,6,8,10,12,20,100]:
+        print("Invalid input")
+        c=int(input("What dice do you want to throw "))
+    k = int(input("How many times do you want to throw it? "))
+    l = 0   
+    while (l!=k):
+        x=random.randint(1,c)
+        print(x)
+        l = l+1
+    p = input("Want to throw another dice? ")
+    if p == "si":
+        risp = True
+    elif p == "no":
+        risp = False
+        print("Thank you for using the automatic dice generator")
